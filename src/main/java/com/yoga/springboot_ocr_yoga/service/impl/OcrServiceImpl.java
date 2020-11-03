@@ -84,10 +84,6 @@ public class OcrServiceImpl implements IOcrService {
         if (multipartFile.isEmpty()) {
             return false;
         }
-        //String fileName = "test.jpg";
-        //int size = (int) multipartFile.getSize();
-        //System.out.println(fileName + "-->" + size);
-        //String path = "E:/test/test.jpg";
         File dest = new File(path);
         if (!dest.getParentFile().exists()) { //若dest的父级目录不存在
             dest.getParentFile().mkdir(); //新建文件夹
