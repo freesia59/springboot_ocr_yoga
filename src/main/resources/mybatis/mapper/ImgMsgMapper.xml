@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace = "com.yoga.springboot_ocr_yoga.mapper.ImgMsgMapper">
+    <resultMap id="BaseResultMap" type="com.yoga.springboot_ocr_yoga.model.ImgMsg">
+        <id column ="id" property="id" jdbcType="BIGINT" />
+        <result column="img2base64" property="img2base64" jdbcType="LONGVARCHAR"/>
+        <result column="imgResult" property="imgResult" jdbcType="VARCHAR"/>
+        <result column="time" property="time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <insert id="saveResult" parameterType="com.yoga.springboot_ocr_yoga.model.ImgMsg">
+        insert into image (img2base64,imgResult,time) values(#{img2base64},#{imgResult},#{time})
+    </insert>
+</mapper>
